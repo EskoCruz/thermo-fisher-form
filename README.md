@@ -13,8 +13,7 @@ Here is the empty flag image holder:
 
 
 
-"ltCountryInfo" in "shared-static/scripts/headerFooter.js"
-
+There are code blocks like the following storing the country and language in the cookie.	`http://www.thermofisher.com/shared-static/scripts/global.js`
 	
 	this.defaultCookies = function() {
         if (!i("CK_ISO_CODE")) {
@@ -26,8 +25,7 @@ Here is the empty flag image holder:
         }
     }
 	
-
-https://www.thermofisher.com/apps/lifetech/js/countriesInfo.js
+Data stored in the cookie:
 ````
 +---------------+----------+
 | Name			| Value    |
@@ -36,3 +34,7 @@ https://www.thermofisher.com/apps/lifetech/js/countriesInfo.js
 | CK_LANG_CODE	| en       |
 +---------------+----------+
 ````
+
+Than taking "ltCountryInfo" in "shared-static/scripts/headerFooter.js" and switching out the placeholder with the flag image stated.
+`https://www.thermofisher.com/apps/lifetech/js/countriesInfo.js`
+
