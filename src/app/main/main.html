@@ -14,7 +14,7 @@
 			<p>&nbsp;</p>
 		</div>
 		<div class="col-sm-12 col-md-8">
-			<form name="tfsForm" action="/submit" class="form-horizontal" ng-submit="vm.createUser(vm.users)" novalidate>
+			<form name="tfsForm" class="form-horizontal" ng-submit="vm.createUser(vm.users)" novalidate>
 				<div class="form-group" ng-class="{ 'has-error' : tfsForm.name.$invalid && !tfsForm.name.$pristine }">
 					<label for="userName" class="col-sm-2 control-label">User Name</label>
 					<div class="col-sm-10 col-lg-9">
