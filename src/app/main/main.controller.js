@@ -5,15 +5,12 @@
 		.module('thermoFisherForm')
 		.controller('MainController', MainController);
 
-	MainController.$inject = ['usersApi', 'initialData', '$http', '$location'];
+	MainController.$inject = ['usersApi', 'initialData'];
 
 	/** @ngInject */
-	function MainController(usersApi, initialData, $http, $location) {
+	function MainController(usersApi, initialData) {
 		var vm = this;
 
-		vm.awesomeThings = [];
-		vm.classAnimation = '';
-		vm.creationDate = 1445260519822;
 		vm.users = initialData;
 		vm.createUser = createUser;
 		vm.submitted = false;
