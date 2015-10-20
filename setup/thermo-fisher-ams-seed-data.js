@@ -1,14 +1,12 @@
-var request       = require('request'),
-    q             = require('q'),
-    usersData    = require('./data-users.json');//,
-//    gamesData     = require('./data-games.json'),
-//    teamsData     = require('./data-teams.json'),
-//    locationsData = require('./data-locations.json');
+var request			= require('request'),
+    q				= require('q'),
+    usersData		= require('./data-users.json'),
+    defaultData     = require('./data-default.json');
 
 var url = 'https://thermo-fisher.azure-mobile.net/tables';
 
 uploadData(url + '/users', usersData);
-
+uploadData(url + '/default', defaultData);
 
 
 function uploadData(url, data) {

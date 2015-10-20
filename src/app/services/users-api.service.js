@@ -30,7 +30,7 @@
 		////////////////
 
 		function getUsers() {
-			return httpGet('/users');
+			return httpGet('/default');
 		}
 
 		function addUser(users) {

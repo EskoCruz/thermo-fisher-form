@@ -36,10 +36,21 @@
 			usersApi.addUser(newUser).then(function(data) {
 				//vm.users.name = '';
 				//vm.users.email = '';
+
 				vm.users.push(data);
-				vm.submitted = true;
+				if (data.name != undefined) {
+					(vm.warning) ? vm.warning = false : null;
+					vm.submitted = true;
+				}
+				else {
+					vm.warning = true;
+				}
+
+			}).then(function (data) {
 
 			});
+
+
 		}
 
 
