@@ -1,0 +1,47 @@
+<div class="container">
+
+	<div>
+		<acme-navbar creationDate="main.creationDate" />
+	</div>
+
+	<div class="jumbotron text-center">
+		<h1>Thermo Fisher Scientific Test</h1>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-12 col-md-4 text-center">
+			<img class="img-thumbnail pull-right-md img-responsive" ng-src="{{vm.users[0].profileImage}}" alt="{{vm.users[0].name}}'s profile">
+			<p>&nbsp;</p>
+		</div>
+		<div class="col-sm-12 col-md-8">
+			<form name="tfsForm" action="/submit" class="form-horizontal" ng-submit="vm.createUser(vm.users)" novalidate>
+				<div class="form-group" ng-class="{ 'has-error' : tfsForm.name.$invalid && !tfsForm.name.$pristine }">
+					<label for="userName" class="col-sm-2 control-label">User Name</label>
+					<div class="col-sm-10 col-lg-9">
+						<input name="name" type="text" class="form-control" ng-model="vm.users.name" id="userName" placeholder="User Name" required>
+						<p ng-show="tfsForm.name.$invalid && !tfsForm.name.$pristine" class="help-block">You name is required.</p>
+					</div>
+				</div>
+				<div class="form-group" ng-class="{ 'has-error' : tfsForm.email.$invalid && !tfsForm.email.$pristine }">
+					<label for="userEmail" class="col-sm-2 control-label">User Email</label>
+					<div class="col-sm-10 col-lg-9">
+						<input name="email" type="email" class="form-control" ng-model="vm.users.email" id="userEmail" placeholder="Email" required>
+						<p ng-show="tfsForm.email.$invalid && !tfsForm.email.$pristine" class="help-block">Enter a valid email.</p>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10 col-lg-9">
+						<button type="submit" ng-hide="vm.submitted" ng-disabled="tfsForm.$invalid" class="btn btn-primary">Sign in</button>
+						<div class="alert alert-danger" ng-show="vm.warning" role="alert">Error!</div>
+						<div class="alert alert-success" ng-show="vm.submitted" role="alert">Submitted Successfully!</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div class="row">
+
+	</div>
+
+</div>

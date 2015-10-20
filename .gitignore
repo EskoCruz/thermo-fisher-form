@@ -1,0 +1,9 @@
+node_modules/
+bower_components/
+.sass-cache/
+.idea/
+.tmp/
+dist/
+build/
+
+setup/node_modules
